@@ -14,10 +14,12 @@ newString = ""
 		} else if (alphabetUppercase.includes(input[i]) == true) {
 			position = alphabetUppercase.indexOf(input[i]) + shift
 				if (position > 25) {position -= 26}
+				if (position > 0) {position += 26}
 			newString += alphabetUppercase[position]
 		} else {
 			position = alphabetLowercase.indexOf(input[i]) + shift
 				if (position > 25) {position -= 26}
+				if (position > 0) {position += 26}			
 			newString += alphabetLowercase[position]
 		};
 	};
